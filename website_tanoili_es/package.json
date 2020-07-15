@@ -12,7 +12,7 @@
   "dependencies": {
     "aos": "^2.3.4",
     "html-loader": "^0.5.5",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "vue": "^2.5.2",
     "vue-fullpage.js": "0.0.1",
     "vue-gtag": "^1.6.2",
