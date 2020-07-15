@@ -1,0 +1,21 @@
+body.no_touch
+    section
+        &.comparative
+            .oil_comparison .bar_graph_content
+                .bar_graph .bar
+                    > div
+                        transition height .3s
+                        &::before
+                            bottom 50%
+                            transform translateY(50%)
+                            right 10px
+                            opacity 0
+                            transition opacity .3s
+                            @extend .ct-light
+                    &.avocado
+                    &:hover
+                        > div
+                            height 24px
+                            &::before
+                                opacity 1
+                                transition opacity .3s .2s

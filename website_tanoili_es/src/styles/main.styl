@@ -1,0 +1,1355 @@
+@import 'imports/variables'
+@import 'imports/normalize'
+@import 'imports/mixins'
+@import 'imports/classes'
+@import 'imports/fonts'
+@import 'imports/icons'
+@import 'imports/animate'
+
+figure
+ul
+ol
+fieldset
+  margin 0
+  padding 0
+
+ul
+ol
+  list-style none
+
+fieldset
+  border none
+
+address
+  font-style normal
+
+a
+input
+select
+button
+  outline none
+  appearance none
+  &:hover
+  &:focus
+    outline none
+
+a
+  text-decoration none
+  transition all .3s
+
+input
+textarea
+  border 0
+  padding 0
+  &:invalid
+  &:focus
+    box-shadow none
+    outline none
+
+input:-webkit-autofill
+input:-webkit-autofill:hover
+input:-webkit-autofill:focus
+input:-webkit-autofill:active
+  transition background-color 5000s ease-in-out 0s, color 5000s ease-in-out 0s
+
+html
+body
+  width 100vw
+  height 100vh
+
+body
+  text-rendering geometricPrecision
+  overflow-x hidden
+  @extend .ff-intelo
+  font-weight 400
+  &.no_scroll
+    overflow hidden
+  &.fp-viewing-home
+    #fp-nav ul li a
+      &.active span
+        @extend .bg-deep
+      span
+        @extend .bg-primary_alt
+
+#app
+  position relative
+  width 100vw
+
+#fp-nav ul li a
+  &.active span
+    @extend .bg-deep
+  span
+    @extend .bg-primary
+
+// Animation in the page change
+.page_transition-forward-enter-active
+.page_transition-forward-leave-active
+.page_transition-backward-enter-active
+.page_transition-backward-leave-active
+  transition transform .4s, opacity .4s
+
+.page_transition-forward-enter-active
+.page_transition-backward-enter-active
+  transition-delay .4s
+
+.page_transition-enter-to
+.page_transition-leave
+  opacity 1
+  transform translateY(0)
+
+.page_transition-forward-enter
+  opacity 0
+  transform translateY(10px)
+
+.page_transition-forward-leave-to
+  opacity 0
+  transform translateY(-10px)
+
+.page_transition-backward-enter
+  opacity 0
+  transform translateY(-10px)
+
+.page_transition-backward-leave-to
+  opacity 0
+  transform translateY(10px)
+
+// Animation in the page change
+
+.link
+  position relative
+  display inline-block
+  @extend .ct-primary
+  letter-spacing 2px
+  text-transform uppercase
+  &::after
+    position absolute
+    content ''
+    @extend .bg-deep
+    transition width .3s
+  &.center_marker
+    &::after
+      bottom 0
+      left 50%
+      transform translate(-50%, 5px)
+      width 0
+      height 1px
+    &.router-link-active
+    &:hover
+      &::after
+        width 20px
+  &.left_marker
+    transition padding .3s
+    &::after
+      top 50%
+      transform translateY(-50%)
+      left 0
+      width 0
+      height 1px
+    &.router-link-active
+    &:hover
+      padding-left 20px
+      &::after
+        width 10px
+  &[class^="icon-"]
+  &[class*=" icon-"]
+    text-transform none
+    &::before
+      display inline-block
+      width 30px
+      height @width
+      line-height @height
+      font-size 16px
+      margin-right 10px
+      @extend .bg-deep
+      @extend .ct-light
+      border-radius 2em
+      text-align center
+      vertical-align -3px
+.after-btn
+  &::before
+    //position absolute
+    content ''
+    background url("../assets/img/icons/ico-next.svg") no-repeat
+    padding: 10px 10px
+    margin-left 160px
+    vertical-align middle
+  &:hover
+    &:before
+      animation-name moveRight_1
+      animation-iteration-count infinite
+      animation-duration 2.5s
+      animation-timing-function ease-in-out
+
+@keyframes moveRight_1
+  0%
+    transform scale3d(1)
+  50%
+    transform scale3d(1.2, 1.2, 1.4);
+  100%
+    transform scale3d(1)
+.button
+    position relative
+    display inline-grid
+    padding 10px 45px
+    background transparent
+    font-size 12px
+    height 40px
+
+    line-height @height
+    letter-spacing 1px
+    text-transform uppercase
+    cursor pointer
+    border none
+    transition color .3s, background-color .3s, border-color .3s
+  &.submit
+      &::after
+        position absolute
+        top 50%
+        left @top
+        transform translate(-50%, -50%)
+        content attr(data-text)
+        white-space nowrap
+      &.loading
+      &.error
+      &.success
+        pointer-events none
+      &.loading
+        overflow hidden
+        &::after
+          content attr(data-text-sending)
+        i:
+        :before
+          @extend .bg-primary
+          animation-play-state running
+/*  position relative
+  display inline-block
+  padding 0 25px
+  border-radius 2em 0
+  @extend .bg-deep
+  @extend .ct-light
+  font-size 12px
+  height 40px
+  line-height @height
+  letter-spacing 1px
+  text-transform uppercase
+  cursor pointer
+  border none
+  transition color .3s, background-color .3s, border-color .3s
+  &.alt
+    @extend .bg-primary_alt
+    @extend .ct-primary
+    border none
+  &:hover
+    @extend .bg-light
+    @extend .ct-primary
+  &.submit
+    &::after
+      position absolute
+      top 50%
+      left @top
+      transform translate(-50%, -50%)
+      content attr(data-text)
+      white-space nowrap
+    &.loading
+    &.error
+    &.success
+      pointer-events none
+    &.loading
+      overflow hidden
+      &::after
+        content attr(data-text-sending)
+      i:
+      :before
+        @extend .bg-primary
+        animation-play-state running
+    &.error
+    &.success
+      i
+        display none*/
+    &.error
+      background-color $color_solid_alert
+      &::after
+        content attr(data-text-error)
+    &.success
+      background-color $color_solid_primary
+      &::after
+        content attr(data-text-sent)
+
+.split_panel
+  position relative
+  width 100%
+  flex_content()
+  justify-content space-around
+  > div
+    position relative
+    width 20%
+    .wrapper
+      position relative
+      width 95%
+      height 100%
+      flex_content(false)
+      justify-content center
+      text-align center!important
+    &:first-child .wrapper
+      margin-right 5%
+    &:last-child .wrapper
+      margin-left 5%
+  &.reverse
+    flex-direction row-reverse
+    text-align right
+    > div
+      &:first-child .wrapper
+        margin-left 5%
+        margin-right 0
+      &:last-child .wrapper
+        margin-right 5%
+        margin-left 0
+
+.headlong
+  position relative
+  .headlong-title
+    margin 0 0 20px 0
+  .headlong-description
+    margin 0
+  &.center
+    text-align center
+  &.wrapper
+    wrapper(30)
+.title-section
+  margin-top 20vh
+  text-space 2px
+  letter-spacing 5px
+.mt-25vh
+  margin-top 25vh
+.slider
+  width:100%;
+  margin: 3% auto;
+  height:50%
+  margin-bottom 0
+.cocina-desc
+  position relative
+  width: 45%
+  text-align: center
+  z-index: 100
+  line-height 2em
+  //display flex
+  p
+    margin 0
+    z-index 100
+    line-height 24px
+  &::after
+    position absolute
+    content ''
+    background-image url("../assets/img/icons/hoja-left.svg")
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    padding: 45px 0;
+    top: -25%;
+
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50%;
+    filter: opacity(0.4);
+    -webkit-filter: opacity(0.4);
+
+.subt-desc
+  width: 55%
+  padding: 40px 1px
+  text-align: center
+  z-index: 100
+  line-height 2em
+  p
+    margin 0
+    z-index 100
+
+.galeria-recetas
+  width 100%
+  display flex
+  flex-wrap wrap
+  justify-content center
+.cont-img-gal
+  flex-basis: 15%
+  margin-left: 10px
+  margin-right: 10px
+  padding-bottom: 10px
+
+.img-responsive
+  width 100%
+  height auto
+
+.ver-recetario
+  display list-item
+  list-style none
+
+.bg-radiant
+  position relative
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    right top,
+    color-stop(0.37, #FAFAFA),
+    color-stop(1, #E8EBB8)
+  )
+  background-image: -o-linear-gradient(left bottom, #FAFAFA 37%, #E8EBB8 100%)
+  background-image: -moz-linear-gradient(left bottom, #FAFAFA 37%, #E8EBB8 100%)
+  background-image: -webkit-linear-gradient(left bottom, #FAFAFA 37%, #E8EBB8 100%)
+  background-image: -ms-linear-gradient(left bottom, #FAFAFA 37%, #E8EBB8 100%)
+  background-image: linear-gradient(to left bottom, #FAFAFA 37%, #E8EBB8 100%)
+
+.bg-radiant-lr
+  position relative
+  background: rgb(255,255,255);
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(232,235,184,1) 100%);
+
+.bg-border
+  &::after
+    position: absolute;
+    content: '';
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    background-image: url('../assets/img/icons/patron.svg');
+    background-repeat: repeat-x;
+
+.f-logos
+  display flex
+  flex-wrap wrap
+
+.logos-footer
+  flex-basis: 25%
+  width: 30%
+  height 30%
+  margin-right: 15px
+  margin-left: 25px
+
+.menu-footer
+  display flex
+
+.list-footer
+  margin-top 3em
+  text-align center
+  line-height 1.2em
+
+.social-cont
+  display flex
+  flex-wrap wrap
+  justify-content flex-end
+  .social-icons
+    width 25px
+    height 90%
+    margin-left 20px
+    margin-right 20px
+    &.facebook
+      width 13px
+
+  .info-contacto
+    margin-right 20px
+    a,p
+      padding-left 15px
+      padding-top 0
+      padding-bottom 2px
+      margin-bottom 5px
+      margin-top 0
+      text-align right!important
+      &.bordered
+        border-bottom 1px solid black
+
+.amazon
+  margin-left 30px
+  display: flex
+  align-items center
+  img
+    width 25%
+    margin-left 10px
+    margin-top 10px
+.input-lyonn
+  background #ffffff
+  width 100%
+  opacity 0.5
+  padding-top 20px
+  padding-bottom 20px
+  .column
+    display flex
+    justify-content space-between
+    div
+      margin 0 30px
+      flex-basis 50%
+    .ico-container
+      justify-content center
+      .lyon-ico
+        width 25%
+    .love-lyonn
+      justify-content flex-end
+      position relative
+      display flex
+      align-items center
+      span
+        &::before
+          vertical-align middle
+          content ''
+          cursor pointer
+          background-image url("../assets/img/icons/lyonn-logo.svg")
+          background-size: contain
+          background-repeat: no-repeat
+          background-position: center
+          padding: 10px
+          /* right: 0; */
+          margin-right 20px
+          width: 38%
+          height: 4%
+.container-slide
+  display flex
+  flex-wrap wrap
+  width 100%
+  margin-top 3%
+  .img-slider
+    flex-basis 40%
+    text-align right
+    //background #787121
+    img
+      border-radius 50%
+      width: 233.5px
+      height: 233.5px
+  .text-slider
+    flex-basis 33%
+    .descripcion-p
+      line-height 24px
+    //background #d0661b
+
+.slider-container
+  white-space: unset!important
+.titulo-proceso
+  margin-bottom 0
+  margin-top 0
+
+
+.li-res
+  margin 0!important
+.slider-pagination-bullets
+  top 20px
+  left 0
+  width 100%
+.slider-pagination-bullets-b
+  bottom 5%!important
+  top unset
+.swiper-pagination-bullet
+  cursor pointer
+  margin-left 20px
+  margin-right 30px
+  font-family 'gotham'
+  font-weight 500
+  font-size 17px
+  color #615d24
+.container-slider
+  position relative
+  display: flex;
+  justify-content: center;
+  width 100%
+  height 100%
+  flex-wrap: wrap
+.under-products
+  display flex
+  margin-top -80px
+  position relative
+  .controls
+    flex-basis 75%
+    display: flex;
+    left: 10%;
+    position: relative;
+    justify-content: space-evenly;
+  .amazon-products
+    flex-basis 15%
+    position absolute
+    left 7%
+    top: -20px
+.slider-fran
+  overflow hidden
+  .container-fran
+    white-space nowrap
+    transition all 0.3s
+    position relative
+    left 0
+    z-index 0
+    margin-top 20vh
+    *
+      white-space normal
+  .contenedor-products
+    width 100%
+    height auto
+    display inline-block
+    margin-right -4px
+  .controls
+    //position absolute
+    padding 0
+    text-align center
+    bottom 2%
+    margin 0
+    width 100%
+    z-index: 5
+    li
+      display inline-block
+      cursor pointer
+      margin-left 15px
+      margin-right 25px
+      font-weight 500
+      font-size 17px
+      color #615d24
+      width 40px
+      height 40px
+.ul-controls
+  display flex
+  justify-content center
+  align-items center
+
+
+.active-slider {
+  padding-bottom 20px
+}
+.active-slider:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height:100%;
+  border 1px solid #4a471b
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.active-slider div {
+  float:left;
+  width:100%;
+  display flex
+  align-items center
+  justify-content center
+  height 108%
+}
+.slider-pagination-bullet-active-render
+  position: relative;
+  border: 1px solid #4a471b;
+  padding: 10px 16px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+
+/*  &:before
+    position absolute
+    content ''
+    width 50px
+    height 55px
+    background-position center
+    background-size contain
+    background-repeat no-repeat
+    background-image url('../assets/img/icons/circle.svg')!important
+    margin-inline-start: -19px;
+    top -90%*/
+.pattern
+  position absolute
+
+.call-proceso
+
+  &::before
+    position absolute
+    content ''
+    background-image url("../assets/img/call-proceso-1.jpg")
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 110%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+.cont-call-proceso
+  width 40%
+  color #6b6728
+  .tit-call
+    span
+      font-family 'georgia'
+      font-style italic
+/*  top 0
+  left @top
+  width 100%
+  height @width
+  background-image url('../assets/img/pattern.png')
+  opacity .1*/
+
+.main_nav
+  position fixed
+  top 0
+  left @top
+  width 100%
+  height 100px
+  z-index 5
+  transition background-color .3s, height .3s
+  .pattern
+    opacity 0
+    transition opacity .3s
+  .column, nav
+    height 100%
+  nav
+    position relative
+    padding-top 18px
+    ul
+      position relative
+      height 100%
+      flex_content()
+      justify-content center
+      align-items center
+      li
+        position relative
+        margin 15px 20px
+        flex-basis 20px
+        //&:nth-child(3)
+        //  margin 0 40px
+        .logo
+          position relative
+          width 100px
+          transform translateY(50px)
+          transition transform .3s
+          img
+            width: 70%;
+            top: -91px;
+            position: absolute;
+            bottom: 50%;
+    .link
+      width 80px
+      height 50px
+      text-align center
+      line-height @height
+      &.center_marker::after
+        transform translate(-50%, -10px)
+    &.active .link::after
+      width 20px
+  &.scroll
+    @extend .bg-light
+    height 80px
+    .pattern
+      opacity .1
+    nav ul li
+      .logo
+        transform translateY(0)
+        &::before
+          opacity 0
+          visibility hidden
+          transform translateX(-50%) scale(.6)
+
+.landing_nav
+  position absolute
+  top 0
+  left @top
+  width 100%
+  height 120px
+  z-index 5
+  .column, nav
+    height 100%
+  nav
+    position relative
+    ul
+      position relative
+      flex_content()
+      align-items center
+      height 100%
+      margin-left 1%
+      li
+        position relative
+        [class^="icon-"]
+        [class*=" icon-"]
+          position relative
+          display block
+          width 50px
+          height @width
+          text-align center
+          line-height @height
+          cursor pointer
+          @extend .ct-primary
+          @extend .fs-18
+    .logo
+      position absolute
+      top 57%
+      left 49%
+      width 5.1%
+      transform translate(-40%, -50%)
+      img
+        position relative
+        width 100%
+
+.main_nav
+  .contactar
+    position absolute
+    right 3%
+    top 50%
+    transform translateY(0%)
+    letter-spacing 1px
+  .dropdown_language
+    position absolute
+    left 1%
+    top 50%
+    transform translateY(-15%)
+    letter-spacing 1px
+    .dropdown_define
+      display block
+      position relative
+      cursor pointer
+      width 50px
+      height 50px
+      line-height @height
+      user-select none
+      > i
+        svg
+          position absolute
+          right 0
+          top 47%
+          transform translateY(-50%)
+          font-size 18px
+          transition transform .3s
+    .dropdown_menu
+      position absolute
+      width 100%
+      border-radius 5px
+      padding 5px 0
+      pointer-events none
+      opacity 0
+      visibility hidden
+      transform translateY(-10px)
+      transition opacity .3s, visibility .3s, transform .3s
+      @extend .bg-deep
+      &::before
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        bottom 100%
+        content ''
+        width 0
+        height 0
+        border-left 6px solid transparent
+        border-right 6px solid transparent
+        border-bottom 6px solid $color_solid_deep
+      .dropdown_menu-item
+        padding 0 10px
+        &:not(:last-child)
+          margin-bottom 2px
+    &.active
+      .dropdown_define > i
+        svg
+          transform translateX(0) translateY(-7px) rotate(180deg)
+      .dropdown_menu
+        pointer-events auto
+        opacity 1
+        visibility visible
+        transform translateY(0)
+
+
+.landing_nav
+  .contactar
+    position absolute
+    right 5%
+    top 50%
+    transform translateY(-50%)
+    letter-spacing 1px
+  .dropdown_language
+    letter-spacing 1px
+    left 5%
+    .dropdown_define
+      display block
+      position relative
+      cursor pointer
+      width 50px
+      height 50px
+      line-height @height
+      user-select none
+      > i
+        svg
+          position absolute
+          right 0
+          top 50%
+          transform translateX(-2px) translateY(-9px)
+          font-size 18px
+          transition transform .3s
+    .dropdown_menu
+      position absolute
+      width 100%
+      border-radius 5px
+      padding 5px 0
+      pointer-events none
+      opacity 0
+      visibility hidden
+      transform translateY(-10px)
+      transition opacity .3s, visibility .3s, transform .3s
+      @extend .bg-deep
+      &::before
+        position absolute
+        left 50%
+        transform translateX(-50%)
+        bottom 100%
+        content ''
+        width 0
+        height 0
+        border-left 6px solid transparent
+        border-right 6px solid transparent
+        border-bottom 6px solid $color_solid_deep
+      .dropdown_menu-item
+        padding 0 10px
+        &:not(:last-child)
+          margin-bottom 2px
+    &.active
+      .dropdown_define > i
+        svg
+          transform translateY(-9px) translateX(-3px) rotate(180deg)
+      .dropdown_menu
+        pointer-events auto
+        opacity 1
+        visibility visible
+        transform translateY(0)
+
+.back-ico
+  &:before
+    content ''
+    background-image url("../assets/img/icons/back-ico.svg")
+    background-size 36%
+    background-position center
+    background-repeat no-repeat
+    padding 20px
+    margin-right: 20px
+    cursor pointer
+footer
+  position relative
+  display flex
+  flex-wrap wrap
+  &::before
+    position: absolute;
+    content: '';
+    top: 50px
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    background-image: url('../assets/img/icons/patron.svg');
+    background-repeat: repeat-x;
+    opacity 0.6
+  .footer_content
+  .copyright
+    position relative
+  .footer_content
+    padding 50px 0
+    .about_us
+      position relative
+      height 100%
+      flex_content()
+      .logo
+        position relative
+        width 80px
+        padding-right 40px
+        flex_content(false)
+        justify-content center
+        > img
+          position relative
+          display block
+          width 100%
+          min-width @width
+      .description
+        width calc(100% - 120px)
+        flex_content(false)
+        justify-content center
+    .social_networks a
+      position relative
+      display block
+      width 40px
+      height @width
+      text-align center
+      @extend .bg-deep
+      @extend .ct-light
+      border-radius 50%
+      transition color .3s, background-color .3s
+      &::before
+        font-size 20px
+        line-height 40px
+      &:hover
+        @extend .bg-light
+        @extend .ct-primary
+  .copyright
+    height 50px
+    .column
+      height 100%
+    ul.horizontal
+      justify-content flex-end
+      align-items center
+      height 100%
+    em.author
+      font-style normal
+      .link
+        display inline
+    span
+      line-height 50px
+  ul
+    position relative
+    > li
+      position relative
+      &:not(:last-child)
+        margin-bottom 10px
+    &.horizontal
+      flex_content()
+      > li
+        margin-bottom 0
+        &:not(:last-child)
+          margin-right 15px
+
+.snumber
+  margin-left 8%
+
+// sobre nosotros page
+.line-cont
+  width 100%
+  display flex
+  justify-content center
+.line
+  width 20%
+  border-bottom 1.5px solid #787121
+  text-align center
+.nosotrosbg
+  position relative
+  height 100%
+  height 85vh
+  &::before
+    position absolute
+    content ''
+    top 0
+    left @top
+    width 100%
+    //height @width
+    height 113vh
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    background-image url('../assets/img/fondo-nosotros.jpg')!important
+
+.bg-flat
+  background-color #dde1a2
+  &::before
+    content ''
+    width 100%
+    height 25vh
+    position absolute
+    top: -20vh
+    background-color #dde1a2
+    filter: blur(25px) opacity(0.71);
+    -webkit-filter: blur(25px) opacity(0.71);
+.hide-animation
+  visibility hidden
+.historia-r1
+  display flex
+  flex-wrap nowrap
+  width 85%
+  justify-content center
+  div
+    flex-basis 23%
+    border 1px solid #75702c
+    margin-left 1em
+    margin-right 1em
+    padding 40px 50px
+  .history-img
+    background url("../assets/img/history.jpg")
+    background-size contain
+    background-repeat no-repeat
+  .valores
+    background url("../assets/img/icons/valores.png")
+    background-size: 243px 208px;
+    background-position: 50% 75%;
+    background-repeat: no-repeat;
+  .bg-hoja
+    position relative
+    &::before
+      position absolute
+      content ''
+      background-image url("../assets/img/icons/hoja-left.svg")
+      background-size: contain;
+      width: 290px;
+      height: 350px;
+      background-repeat: no-repeat;
+      background-position: center;
+      /* padding: 45px 135px; */
+      top: 0;
+      opacity: 0.3;
+
+.historia-r2
+  display flex
+  flex-wrap nowrap
+  width 83%
+  max-width 85%
+  .cont-bordered
+    padding 40px 50px
+    border 1px solid #75702c
+    display flex
+    flex-wrap nowrap
+    .texto-r2
+      flex-basis 70%
+.titulo-r2
+  flex-basis 30%
+  position relative
+  display flex
+  align-items center
+  justify-content center
+  &::before
+    position absolute
+    content ''
+    background-image url("../assets/img/icons/hoja-left.svg")
+    background-size: contain;
+    width: 265px;
+    height: 134px;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* padding: 45px 135px; */
+    top: 0
+    opacity: 0.6
+
+// página de contacto
+.fondo-contact-img
+  position relative
+  height: 20vh
+  &::before
+    position absolute
+    content ''
+    top 0
+    left @top
+    width: 100%;
+    height: 35vh;
+    background-position center
+    background-size cover
+    background-repeat no-repeat
+    background-image url('../assets/img/fondo-contact-8.png')!important
+  &::after
+    position absolute
+    content ''
+    top 0
+    left @top
+    width: 100%
+    height: 35vh;
+    background-color #dde1a2
+    opacity 0.65
+
+.logo-contact
+  width 70px
+  border-bottom 1px solid #505326
+  padding-bottom 25px
+
+.fondo-patron
+  position relative
+  &::before
+    content ''
+    position absolute
+    top 0
+    background-image url("../assets/img/icons/patron-contacto.svg")
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+.list-caracteristicas
+  list-style disc
+  li
+    margin-bottom 14px!important
+    border-bottom 1px solid #d9d9d9
+    padding-bottom 10px
+table
+  border-collapse: collapse;
+  border-spacing: 0;
+
+.table-product
+  width 88%
+  color #75702c
+  margin-left 7%
+  thead
+    th
+      border-collapse collapse
+      padding 10px 20px
+      padding-left 0
+      border-top 1px solid #75702c
+      border-bottom 1px solid #75702c
+      text-align left
+  td
+    text-align left
+    color black
+    width 16.6%
+.table-responsive
+  overflow auto
+  margin-top 10vh
+.amazon-products
+  padding-top 10px
+  border-top 1px solid #615d24
+  width 16%
+  img
+    width 35%
+.img-product
+  position relative
+  margin-top 10%
+  img
+    z-index 100
+.back-circle
+  position relative
+  &:before
+    content ''
+    position absolute
+    background url("../assets/img/icons/circulo-product.svg")
+    background-size: 62%;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    right 0%
+.back-circle-bigger
+.back-circle-bigger
+  &:before
+    background-size 86%
+.slider-benefits
+  display none
+  .controls-lateral
+    display flex
+    justify-content space-between
+    align-items center
+    padding 0 5px
+  .controls-benefits
+    top 35%!important
+    height 20px
+
+.title-historia
+  p
+    margin 0
+.p-show-sm
+  display none
+.fix-home
+  position absolute
+  top -8px
+  left -20px
+
+
+.container-process
+  margin-top 0vh!important
+.controls-process
+  top: 0;
+  bottom: unset!important;
+  position: absolute!important;
+  left: 0!important;
+.container-in-process
+  margin-top 7%
+.top-compromiso
+  &:before
+    top -20%
+.mx-call-1
+  margin-left 1em
+  margin-right 5em
+
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+  transform: translateX(-10px);
+  &.aos-animate {
+    transform: translateX(0);
+  }
+}
+
+[data-aos="animation-left"] {
+  opacity 0
+  transition-property: transform, opacity;
+  transform: translateX(10px);
+  &.aos-animate {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+[data-aos="just-fade"] {
+  opacity: 0;
+  transition-property:  opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+}
+
+[data-aos="up-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+  transform: translateY(-10px);
+  &.aos-animate {
+    transform: translateY(0);
+  }
+}
+[data-aos="down-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  &.aos-animate {
+    opacity: 1;
+  }
+  transform: translateY(10px);
+  &.aos-animate {
+    transform: translateY(0);
+  }
+}
+
+.circle {
+  position: relative;
+  display: block;
+  margin: 2em 0;
+  background-color: transparent;
+  color: #222;
+  text-align: center;
+}
+
+.circle:after {
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #ddd;
+  content: "";
+}
+
+.circle__inner {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__wrapper {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.circle__content {
+  display: table-cell;
+  padding: 1em;
+  vertical-align: middle;
+}
+
+.menu-opacity
+  // background-color: #a8aa19;
+  transition all 0.5s ease-in-out
+  background-color rgba(168, 170, 25, 1)
+  //display none
+  height 110px
+  border-radius 8px
+  nav
+    padding-top 0!important
+
+@import 'page'
+@import 'modal'
+@import 'imports/no_touch'
+@import 'imports/responsive'

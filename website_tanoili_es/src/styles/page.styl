@@ -1,0 +1,895 @@
+@import 'imports/variables'
+@import 'imports/mixins'
+
+section
+  position relative
+  .column-new
+    position relative
+    height 100%
+    flex_content(false,false)
+    justify-content normal!important
+    align-items center
+  .column
+    position relative
+    height 100%
+    flex_content(false,false)
+    justify-content center
+    align-items center
+  &.comunbg
+    &::before
+      position absolute
+      content ''
+      top 0
+      left @top
+      width 100%
+      //height @width
+      height 130vh
+      background-position center
+      background-size cover
+      background-repeat no-repeat
+      background-image url('/static/img/fondo-comun.jpg')!important
+  &.bg-comparative
+    &:before
+      height 100%
+  &.header-n
+    &::before
+      position absolute
+      content ''
+      top 0
+      left @top
+      width 100%
+      //height @width
+      height 100vh
+      background-position center
+      background-size cover
+      background-repeat no-repeat
+      background-image url('/static/img/hero_desktop.jpg')
+    .shape
+      position absolute
+      top 0
+      left @top
+      width 0%
+      height @width
+      overflow hidden
+      .triangle
+        position absolute
+        bottom 0
+        right 0
+        width 100vw
+        height @width
+        overflow hidden
+        transform translate(50%, 50%) rotate(-45deg) skew(15deg, 15deg)
+        .pattern
+          top 50%
+          left @top
+          width 200%
+          height @width
+          transform translate(-50%, -50%) rotate(45deg)
+    .avocado
+      position: absolute
+      background-image url("../assets/img/botellas.png")
+      width: 60%;
+      height: 77%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      top 19%
+      transform translateX(1%)
+      z-index 100
+    .avocado-benefits
+      width 30%
+      height: 90%;
+      position relative
+      z-index 0
+      &:before
+        content ''
+        position absolute
+        background url("../assets/img/beneficios.png")
+        background-size: contain
+        background-position center
+        background-repeat no-repeat
+        display: block;
+        width: 100%;
+        height: 90%;
+        top: 11%
+        left -2%
+        transform translateX(3%)
+        z-index 100
+    .col-left
+      position absolute
+      left 10%
+      text-align center
+      z-index 100
+      .col-container
+        position relative
+        &:after
+          content ''
+          background-image url("../assets/img/icons/hoja-left.svg")
+          background-size cover
+          background-repeat no-repeat
+          background-position left
+          width 250px
+          height 123px
+          position absolute
+          top -150%
+          left 0
+      p
+        margin 0
+        z-index 100
+
+    .col-right
+      position absolute
+      right 10%
+      z-index 100
+      text-align center
+      .col-container-r
+        position relative
+        &:before
+          content ''
+          background-image url("../assets/img/icons/hoja-right.svg")
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: left;
+          width: 143px;
+          height: 150px;
+          position: absolute;
+          top: -200%;
+          left 15%
+
+
+      p
+        margin 0
+      z-index 100
+    .col-left-aceite
+      position absolute
+      left 10%
+      transform translateY(-20%)
+      div
+        position relative
+        text-align: center;
+        &:before
+          content: ''
+          position absolute
+          background-image url("../assets/img/icons/hoja-left.svg")
+          background-size 83%
+          background-repeat no-repeat
+          background-position top
+          width: 100%;
+          height 100%
+          z-index: 100;
+          right: -10%
+          top -15%
+          opacity 0.7
+        p
+          margin 0
+          z-index 100
+    .col-right-aceite
+      position absolute
+      right 12%
+      text-align: center;
+      z-index: 100;
+      transform translateY(-20%)
+      div
+        position relative
+        &:before
+          content ''
+          position absolute
+          background-image url("../assets/img/icons/hoja-right.svg")
+          background-size 45%
+          background-repeat no-repeat
+          background-position center
+          width: 100%
+          height 100%
+          left -3%
+          top -25%
+          opacity 0.5
+        p
+          margin 0
+          z-index 100
+    .col-right-text
+      position absolute
+      right 10%
+      top 54%
+      width 220px
+      font-size 13px
+      padding 40px 45px
+      text-align center
+      z-index 110
+      p
+        margin 0
+    .col-left-benefits
+      position absolute
+      width: 300px;
+      padding: 7px 10px;
+      text-align: center;
+      z-index: 100;
+    .col-right-benefits
+      position absolute
+      width: 300px
+      padding: 7px 10px
+      text-align: center
+      z-index: 100
+    .descubrir
+      display flex
+      justify-content center
+      position absolute
+      top calc(99vh - 60px)
+
+    .col-left-text
+      position absolute
+      left 8%
+      right 8%
+      top 54%
+      width 220px
+      font-size 13px
+      padding 40px 45px
+      text-align center
+      z-index 110
+      p
+        margin 0
+.ico-upDown
+  animation-name upDown
+  animation-duration 3s
+  animation-iteration-count infinite
+  animation-timing-function: ease-in-out;
+@keyframes  upDown
+  0%
+    transform: translate(0,  0px)
+  65%
+    transform: translate(0, -15px)
+  100%
+    transform: translate(0, 0px)
+
+
+@keyframes inflate
+  0%
+    transform translateX(0px)
+  50%
+    transform translateX(5px)
+  100%
+    transform translateX(0px)
+.saber-mas
+  cursor pointer
+  position relative
+  &:after
+    content ''
+    background url("../assets/img/icons/ico-next.svg")
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12pt;
+    height: 12pt;
+    position: absolute;
+    top:calc(60% - 10px);
+    right -25px
+  &:hover
+    position relative
+    &::after
+      animation inflate 2s forwards
+      animation-iteration-count infinite
+      animation-duration 2.5s
+      animation-timing-function ease-in-out
+      //position absolute
+      width: 12pt;
+      height: 12pt;
+      position: absolute;
+      top:calc(60% - 10px);
+
+.contactar-nxt
+  display flex
+  position relative
+  cursor pointer
+  color #787121
+  &:after
+    content ''
+    background url("../assets/img/icons/Icos.svg") no-repeat
+    padding 1px 9px
+    cursor pointer
+    position absolute
+    height 120%
+    right -34px
+    top -2px
+.section-process
+  .column-nowrap
+    flex-wrap nowrap!important
+.contacto
+  width 65%
+
+.flex-form
+  display flex
+  justify-content center
+  flex-wrap wrap
+
+.col-form
+  flex-basis 45%
+  display flex
+  margin-right 20px
+  margin-left 20px
+  flex-wrap wrap
+.col-form-mess
+  flex-basis 100%
+  display flex
+  margin-right 20px
+  margin-left 20px
+  flex-wrap wrap
+
+.input-form
+  width 100%
+  background transparent
+  padding 10px 0px
+  border none
+  border-bottom 1px solid #75702c
+  margin-top 2em
+
+&.contact
+  form
+    position relative
+    .field
+      position relative
+      &:not(:last-child)
+        margin-bottom 10px
+      .input
+        position relative
+        margin-top 10px
+      input
+      textarea
+        display block
+        width calc(100% - 22px)
+        padding 10px
+        background-color transparent
+        @extend .ct-primary
+        font-size 14px
+        border 1px solid $color_solid_deep
+        &::placeholder
+          color $color_solid_deep
+        &:focus
+          border 1px solid $color_solid_deep
+          &::placeholder
+            opacity 0
+        &.invalid
+          border 1px solid $color_solid_alert
+      textarea
+        resize vertical
+      .help
+        font-size 12px
+        &.alert
+          color $color_solid_alert
+    .actions
+      position relative
+      margin-top 20px
+      ul
+        flex_content()
+        justify-content space-between
+        align-items center
+      .link
+        letter-spacing 0
+      .button
+        padding 0
+        width 100px
+  .contact_form
+    position relative
+    wrapper(30)
+  &::before
+    position absolute
+    content ''
+    left 0
+    bottom 0
+    width 100%
+    height 50%
+    background-image url('/static/img/desktop_contact.png')
+    background-position center bottom
+    background-repeat no-repeat
+    background-size cover
+    opacity .2
+
+&.benefits
+  &.switch .benefit
+    .benefit_img .frame::after
+      // animation-play-state running
+      @extend .animate.loading
+    .benefit_info
+      .headlong
+        .headlong-title
+        .headlong-description
+          opacity 0
+          transform translateY(5px)
+      .compare
+        opacity 0
+        transform translateY(5px)
+    .benefit_control > li .benefit_button
+      pointer-events none
+  .benefit
+    position relative
+    height 100%
+    .benefit_img
+    .benefit_info
+      position relative
+      flex_content(false)
+      justify-content center
+      .headlong
+        .headlong-title
+        .headlong-description
+          transition opacity .3s, transform .3s
+        .headlong-description
+          transition-delay .2s
+      .compare
+        position relative
+        margin-top 40px
+        transition opacity .3s, transform .3s
+        transition-delay .3s
+        .button::after
+          position absolute
+          content attr(data-text)
+          top 50%
+          right -10px
+          transform translate(100%, -50%)
+          @extend .ct-primary
+          text-transform none
+          white-space nowrap
+    .benefit_img
+      align-items center
+      .frame
+        position relative
+        display block
+        width 325px
+        height @width
+        overflow hidden
+        border-radius 50%
+        &::after
+          position absolute
+          content ''
+          width 100%
+          height @width
+          top 0
+          left @top
+          @extend .bg-deep
+          transform scale(0, 1)
+          transform-origin left
+        // @extend .animate.loading
+        // animation-play-state paused
+        > img
+          position relative
+          width 100%
+    .benefit_control
+      position absolute
+      right 0
+      top 50%
+      transform translate(-90px, -50%)
+      z-index 4
+      > li
+        position relative
+        &:not(:last-child)
+          margin-bottom 20px
+        &:nth-child(1)
+        &:nth-child(4)
+          transform translateX(-38px)
+        .benefit_button
+          position relative
+          display block
+          border none
+          padding 0
+          width 50px
+          height @width
+          cursor pointer
+          @extend .ct-light
+          background-color transparent
+          transition color .3s
+          i
+            position relative
+            display block
+            text-align center
+            &::before
+              line-height 50px
+          &::before
+            position absolute
+            content ''
+            top 50%
+            left 50%
+            transform translate(-50%, -50%)
+            width calc(100% - 2px)
+            height @width
+            border-radius 50%
+            @extend .bg-primary
+            transition transform .3s, background-color .3s, border .3s
+          &.active
+            @extend .ct-light
+            pointer-events none
+            &::before
+              @extend .bg-deep
+          &:hover
+            @extend .ct-primary
+            &::before
+              @extend .bg-primary_alt
+              transform translate(-50%, -50%) scale(1.5)
+
+&.process
+  position relative
+  .step
+    position relative
+    height 100%
+    .step_img
+    .step_info
+      position relative
+      flex_content(false)
+      justify-content center
+    .step_img
+      align-items center
+      opacity 0
+      transform translateY(10px)
+      transition opacity .3s, transform .3s
+      transition-delay .6s
+      .frame
+        position relative
+        display block
+        width 100%
+        max-width 325px
+        transform translateY(30px)
+        > img
+          position relative
+          width 100%
+    .step_info
+      .headlong
+        .headlong-title
+        .headlong-description
+          opacity 0
+          transform translateY(10px)
+          transition opacity .3s, transform .3s
+          transition-delay .6s
+        .headlong-description
+          transition-delay .7s
+      ul.actions
+        position relative
+        flex_content()
+        margin-top 40px
+        opacity 0
+        transform translateY(10px)
+        transition opacity .3s, transform .3s
+        transition-delay .8s
+        > li
+          position relative
+          &:not(:last-child)
+            margin-right 20px
+          [class^="icon-"]
+          [class*=" icon-"]
+            padding-left 50px
+            text-transform uppercase
+            letter-spacing 1px
+            &::before
+              position absolute
+              left 0
+              top 50%
+              transform translateY(-50%)
+              @extend .fs-32
+              width 40px
+              height @width
+              line-height @height
+              text-align center
+              @extend .ct-primary
+    .step_number
+      position absolute
+      display block
+      font-size 500px
+      white-space nowrap
+      top 50%
+      left 50%
+      transform translate(-50%, -55%)
+      opacity .1
+  .step_control
+    position absolute
+    top 110px
+    z-index 4
+    width 100%
+    flex_content()
+    justify-content center
+    ul
+      position relative
+      flex_content()
+      justify-content center
+      &::before
+      &::after
+        position absolute
+        content ''
+        width 90%
+        top 50%
+        left @top
+      &::before
+        border 1px dashed $color_solid_primary
+        transform translate(-50%, -50%)
+        z-index 1
+      &::after
+        border 1px solid $color_solid_primary
+        transform-origin left
+        transform translate(-50%, -50%) scale(0, 1)
+        transition transform .8s
+        z-index 2
+      &.step_1::after
+        transform translate(-50%, -50%) scale(.5, 1)
+      &.step_2::after
+        transform translate(-50%, -50%) scale(1, 1)
+      > li
+        position relative
+        &:not(:first-child)
+          margin-left 40px
+        .step_button
+          position relative
+          border none
+          padding 0
+          cursor pointer
+          background-color transparent
+          width 30px
+          height @width
+          z-index 3
+          &::before
+            position absolute
+            content ''
+            top 50%
+            left @top
+            transform translate(-50%, -50%)
+            width 25px
+            height @width
+            border-radius 2em
+            @extend .bg-primary
+            z-index 2
+            transition transform .3s, background-color .3s
+          span
+            position relative
+            display block
+            text-align center
+            @extend .ct-light
+            line-height 30px
+            z-index 2
+            transition color .3s, opacity .3s
+          &.current
+            pointer-events none
+            &::before
+              @extend .bg-deep
+              transform translate(-50%, -50%) scale(2)
+            span
+              @extend .ct-light
+          &:hover
+            &::before
+              background-color $color_solid_primary_alt !important
+              transform translate(-50%, -50%) scale(1.5)
+            span
+              color $color_solid_deep !important
+  .slide.active .step
+    .step_img
+      opacity 1
+      transform translateY(0)
+    .step_info
+      .headlong
+        .headlong-title
+        .headlong-description
+          opacity 1
+          transform translateY(0)
+      ul.actions
+        opacity 1
+        transform translateY(0)
+
+&.about
+  .article
+    position relative
+    margin-top 40px
+    .article_img
+    .article_info
+      position relative
+      flex_content(false)
+      justify-content center
+    .article_img
+      align-items center
+      .frame
+        position relative
+        width 325px
+        height @width
+        overflow hidden
+        border-radius 50%
+        @extend .bg-light
+        > img
+          position relative
+          width 100%
+
+&.comparative
+  .split_panel
+    height 100%
+    > div:first-child .wrapper
+      text-align right
+  .types_fats
+  .oil_comparison
+    position relative
+    width 100%
+  .types_fats
+    min-height 500px
+    .comparison_oils
+      position absolute
+      top 50%
+      left @top
+      transform translate(-50%, -50%)
+      width 100%
+      height 400px
+      background-image url('/static/img/comparative/comparison_oils.png')
+      background-position center
+      background-repeat no-repeat
+      background-size contain
+    .headlong .headlong-title
+      position relative
+      &::before
+        position absolute
+        top 50%
+        transform translateY(-50%)
+        content ''
+        width 40px
+        height @width
+        background-position center
+        background-repeat no-repeat
+        background-size contain
+    .split_panel > div
+      .wrapper
+        width 75%
+        justify-content flex-start
+        padding-top 150px
+      &.healthy_fats .wrapper
+        margin-right 25%
+        .headlong .headlong-title
+          padding-right 60px
+          &::before
+            right 0
+            background-image url('../assets/img/icon_good.svg')
+      &.saturated_fats .wrapper
+        margin-left 25%
+        .headlong .headlong-title
+          padding-left 60px
+          &::before
+            left 0
+            background-image url('../assets/img/icon_bad.svg')
+  .oil_comparison
+    padding 50px 0 0 0
+    .split_panel
+      > div
+        .wrapper
+          width calc(100% - 50px)
+        &:first-child .wrapper
+          margin-right 50px
+        &:last-child .wrapper
+          margin-left 50px
+    .headlong
+      height 50px
+      margin-bottom 40px
+      &::before
+        position absolute
+        content ''
+        top 50%
+        left @top
+        transform translate(-50%, -50%)
+        width 48px
+        height @width
+        content 'VS'
+        line-height @height
+        text-align center
+        border-radius 50%
+        border 1px solid $color_solid_deep
+        @extend .ct-primary
+        font-size 12px
+      .headlong-title
+        margin 0
+    .bar_graph_content
+      position relative
+      ol.types
+        position relative
+        flex_content()
+        justify-content center
+        > li
+          position relative
+          padding-left 30px
+          &::before
+            position absolute
+            content ''
+            left 0
+            top 50%
+            transform translateY(-50%)
+            width 20px
+            height @width
+            border-radius 50%
+          &:not(:last-child)
+            margin-right 20px
+          &.healthy_fats::before
+            @extend .bg-primary
+          &.saturated_fats::before
+            background-color $color_solid_alert
+      .bar_graph
+        position relative
+        wrapper(10)
+        flex_content(true, false)
+        padding-bottom 20px
+        .label
+          position relative
+          flex-basis 30%
+          overflow hidden
+          text-overflow ellipsis
+          white-space nowrap
+          text-align left
+          > span
+            line-height 30px
+            padding-right 10px
+        .bar
+          position relative
+          flex 1 1 auto
+          flex_content()
+          align-items center
+          > div
+            position relative
+            height 10px
+            &::before
+              position absolute
+              color: #615d24!important
+              content attr(data-percentage)
+              //@extend .ct-primary
+              font-size 12px
+              bottom 15px
+              right 0
+            &:first-child
+              border-radius 2em 0 0 2em
+            &:last-child
+              border-radius 0 2em 2em 0
+          &:before
+            content ''
+            background-image url('../assets/img/good-fact.svg')
+            width: 1px;
+            height: 13px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 2px 11px;
+          &::after
+            content ''
+            background-image url('../assets/img/bad-fact.svg')
+            width: 1px;
+            height: 13px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 2px 11px;
+            margin-left 10px
+          .healthy_fats
+            background-color $color_solid_primary
+            border .5px solid $color_solid_primary
+            border-right none
+
+          .saturated_fats
+            background-color $color_solid_alert
+            border .5px solid $color_solid_alert
+            border-left none
+.comparative-graph
+  &:before
+    content ""
+    position absolute
+    top -30%
+    background  white
+    width 150%
+    height 50%
+    opacity 1
+    filter blur(20px)
+
+&.about
+  .certification
+    position relative
+    padding-top 100px
+    ul.certificates
+      position relative
+      margin-top 25px
+      flex_content()
+      justify-content center
+      align-items center
+      > li
+        position relative
+        &:not(:last-child)
+          margin-right 20px
+      figure
+        position relative
+        width 80px
+        img
+          position relative
+          display block
+          width 100%
+          min-width @width
+
+&.landing
+  padding 200px 0 100px 0
+  min-height calc(100vh - 400px)

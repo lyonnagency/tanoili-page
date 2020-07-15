@@ -1,0 +1,1267 @@
+@import 'mixins'
+.logo-responsive
+  display none
+
+.btn-desplegable
+  display none
+.logo-responsive-main
+  margin-left auto
+  margin-right auto
+  margin-top -10%
+  display none
+  z-index 10
+
+@keyframes menu
+  from
+    opacity (0.5)
+  to
+    opacity(1)
+
+@keyframes menu-leave
+  from
+    opacity (1)
+  to
+    opacity(0.5)
+.show-text
+  display block!important
+.main_nav
+  nav
+    ul.menu-show
+      animation-duration 500ms
+      animation-name menu
+      display flex
+
+@media all and (max-width: 768px)
+  .show-text
+    display none
+  .hide
+    display none
+  .main_nav
+
+    nav
+      position relative
+      padding-top 0
+      background-color #a8aa19
+      height 60%
+      z-index 0
+
+
+      ul.menu-hide
+        animation-duration 500ms
+        animation-name menu-leave
+        display none
+      ul.menu-show
+        background-color #a8aa19
+        text-align center
+        height 100vh
+        display block
+      .logo
+        display none
+      .logo-responsive
+        padding-top 20px
+        display inline-block
+        position: relative
+        width: 70px
+
+  .dropdown_language
+    transform translateX(50%) translateY(-90%) !important
+
+  .contactar
+    transform translateX(-300%) translateY(1000%) !important
+  .btn-desplegable
+    display block
+    position absolute
+    width 5%
+    z-index 1
+    right 20px
+    top 30%
+
+  section.header-n
+    .col-left
+      width 27%
+      left 6%
+      .col-container
+        &:after
+          width 54%
+          height 100%
+          top -25%
+          left 25%
+    .col-right
+      width 27%
+      right 7%
+      .col-container-r
+        &:before
+          width 28%
+          height 100%
+          top -15%
+          left 35%
+    .avocado
+      width 70%
+      top 15%
+    .descubrir
+      top calc(99vh - 40px)
+    .down-ico
+      height 12px
+    .col-left-aceite
+      left 33%
+      z-index 1
+      top 15%
+    .col-left-text
+      bottom 3%
+      width 33%
+      right 20%
+      left auto
+      top auto
+    .col-right-aceite
+      right 33%
+      z-index 1
+      top 15%
+      div
+        &:before
+          width 90%
+          left 5%
+    .col-right-text
+      top 79%
+      left 21%
+      width 50%
+    .col-right-benefits
+      width 30%
+      right 2%
+    //position relative
+    .col-left-benefits
+      width 30%
+      left 2%
+    .avocado-benefits
+      width 45%
+  .cocina-desc
+    width 70%
+  .galeria-recetas
+    width 80%
+    .cont-img-gal
+      flex-basis 35%
+  .subt-desc
+    width 70%
+  .contacto
+    width 70%
+  .col-form
+    flex-basis 100%
+
+  .modal
+    article
+      .container-modal
+        margin-top 0!important
+        width 65%
+      .img-hoja
+        width 100px
+        height 50px
+    &.comparative
+      &:before
+        height 150vh
+
+// Smartphones
+@media all  and (max-width: 738px)
+  section
+    &.bg-comparative
+      &:before
+        height 160vh
+  .icon-home
+    display none!important
+  .slider-benefits
+    display flex
+    height 40%
+    .container-benefits
+      margin-top 0!important
+      .contenedor-bene
+        width 101%
+        display inline-grid
+        margin-right -4px
+        p
+          padding 0 10%
+          margin-top -1%
+          text-align center
+  .f-basis-sm-60
+    flex-basis 60%
+  .f-basis-sm-40
+    flex-basis 40%
+  .txt-sm-center
+    text-align center!important
+  .back-ico
+    &:before
+      content ''
+      background-image url("../assets/img/icons/back-ico.svg")
+      background-size 36%
+      background-position center
+      background-repeat no-repeat
+      padding 0 20px
+      margin-left 15px
+      margin-right -15px
+      cursor pointer
+  .table-responsive
+    table
+      animation-duration: 2s
+      animation-iteration-count: 4;
+      animation-direction: alternate
+      animation-name: slidein
+  @keyframes slidein
+    from
+      transform: translateX(0)
+    to
+      transform: translateX(-50%)
+  .hide
+    display none
+  .main_nav
+    height 80px
+    .hide-logo
+      &:after
+        content none
+    .logo-min
+      margin-left auto
+      background-image url("../assets/img/icons/logo_tanoili.svg")
+      background-size contain
+      position absolute
+      background-repeat no-repeat
+      width: 25%;
+      height: 23%;
+      left: 45%;
+      bottom: 59%;
+    nav
+      position relative
+      padding-top 0
+      background-color #a8aa19
+      height 60%
+      .link
+        height 1px
+        font-size 10px
+        line-height 0
+      ul
+        li
+          margin 5px 20px
+      ul.menu-hide
+        animation-duration 500ms
+        animation-name menu-leave
+        display none
+      ul.menu-show
+        background-color #a8aa19
+        text-align center
+        height 100vh
+        display block
+      .logo
+        display none
+      .logo-responsive
+        padding-top 20px
+        display inline-block
+        position: relative
+        width: 70px
+    .logo-responsive-main
+      display block
+      width 60px
+      top 15%
+      right 0
+      left 43%
+
+  .dropdown_language
+    transform translateX(50%) translateY(-80%) !important
+  .dropdown_language-land
+    transform translateX(50%) translateY(0%) !important
+
+  .contactar
+    font-size 10px
+    transform translateX(-120%) translateY(-105%) !important
+  .btn-desplegable
+    display block
+    position absolute
+    width 5%
+    z-index 1
+    right 20px
+    top 30%
+  nav
+    height 55%!important
+
+  section.header-n
+    .avocado-benefits
+      height: 70%!important
+      &:before
+        top: 15vh
+        height 80%
+
+    .col-left
+      width 27%
+      left 6%
+      .col-container
+        &:after
+          width 54%
+          height 100%
+          top -25%
+          left 25%
+    .col-right
+      width 27%
+      right 7%
+      .col-container-r
+        &:before
+          width 28%
+          height 100%
+          top -15%
+          left 35%
+    .avocado
+      width 30%
+      margin-top 15px
+    .descubrir
+      top calc(99vh - 40px)
+    .down-ico
+      height 12px
+    .col-left-aceite
+      left 5%
+      z-index 1
+      top 50%
+    .col-left-text
+      top 30%
+      right 0
+      left auto
+    .descubrir-avo
+      top calc(99vh - 4%)!important
+    .col-right-aceite
+      right 7%
+      z-index 1
+      top 50%
+      div
+        &:before
+          width 60%
+          left 16%
+    .col-right-text
+      top 20%
+      left -2%
+      width 210px
+    .col-right-benefits
+      width 40%
+      right -2%
+      display none
+    .col-left-benefits
+      width 40%
+      left -2%
+      display none
+  .cocina-desc
+    width 60%
+    position absolute
+    left 0
+    top 30%
+    &:after
+      width 65%
+      left 15%
+      top -15%
+  .galeria-recetas
+    width 38%
+    position absolute
+    top 15%
+    right 3%
+  .bg-border
+    &:after
+      content none
+  .title-section
+    margin-top 8%
+    margin-left 0%
+  .input-form
+    margin-top 0em
+  .col-form
+    flex-basis 85%
+  .contacto
+    width 50%
+    position absolute
+    right 0
+    top 25%
+  .button
+    margin-top 0!important
+  .col-form-mess
+    flex-basis 85%
+  .subt-desc
+    width 40%
+    position absolute
+    left 0
+    top 30%
+  .coumn-new
+    flex-direction row
+  .list-footer
+    margin-top 1em
+  .f-contact
+    flex-basis 55%!important
+  .f-logos
+    flex-basis 20%
+    flex-wrap wrap
+    margin-top -0%!important
+    justify-content center
+    height 150px
+    .social-cont
+      justify-content space-evenly
+      flex-wrap nowrap
+      width 100%
+      flex-direction column
+      a
+        text-align center
+      .social-icons
+        width 20px
+      .facebook
+        width 12px
+
+      .info-contacto
+        display flex
+        flex-wrap wrap
+        justify-content center
+        margin-right 10px
+        margin-top 0%!important
+    .logos-footer
+      width 10%
+      height 30%
+      margin 0
+  .amazon-footer
+    margin-top 75%
+    margin-left 8%
+    flex-basis 30%
+    position relative
+    display -webkit-box
+    img
+      margin-top 10px
+      margin-left: 7px;
+      width: 60px;
+  .img-social-fsm
+    position absolute
+    left 5%
+    top 45%
+  .amazon
+    margin-top -10%
+  .slider-fran
+    .controls
+      bottom -15%
+  .menu-footer
+    flex-basis 47%
+    margin-top -2em!important
+  .height-full-125
+    height 130vh
+  .input-lyonn
+    .column
+      span
+      .ico-container
+        .lyon-ico
+          width 21%!important
+          left -40%!important
+      .love-lyonn
+        justify-content flex-end
+        position relative
+        span
+          line-height 1.5em
+          position relative
+          &::before
+            vertical-align baseline
+            content ''
+            left -40%!important
+            top 0
+            margin-right 8px
+            padding 8px!important
+  .modal
+    article
+      .container-modal
+        margin-top 0!important
+        width 95%
+      .img-hoja
+        width 100px
+        height 50px
+    &.comparative
+      &:before
+        height 150vh
+  .show_sm
+    display block!important
+  .hide-sm
+    display none
+  .offset-10
+    flex-basis 0
+  .logos-smm
+    flex-basis 45%
+  .section-process
+    .column-nowrap
+      flex-wrap wrap!important
+  .container-slide
+    margin-top 17%
+    justify-content center
+    transform: translateY(12%)
+    .img-slider
+      justify-content center
+      display flex
+      align-items center
+      flex-basis 80%
+      img
+        width 70px
+        height 70px
+        position absolute
+        top -10%
+        right 25%
+    .text-slider
+      flex-basis 100%
+
+  .nowrap-slid-prod
+    flex-wrap nowrap
+    width 100%
+    margin-left 5%
+    margin-right 5%
+  .table-product
+    width 200%
+    margin-left 2%
+  .back-circle
+    &:before
+      right 12%
+
+  .back-circle-bigger
+    &:before
+      background-size 70%
+  .button-conocer
+    position absolute
+    bottom 10%
+  .img-product
+    text-align left
+    margin-top 0
+    margin-top 30%
+  .imagen-prod
+      width 190px!important
+    padding 8px 0!important
+  .img-sm
+    width 140px!important
+  .img-md
+    width 160px!important
+  .img-bg
+    width 180px!important
+  .table-responsive
+    overflow auto
+    margin-top 3vh
+  .slider
+    width:50%;
+    margin:0;
+    height:75%
+    margin-top 11%
+  .amazon-products
+    left: 72%;
+    bottom: -15%;
+    padding-top: 7px;
+    width: 16%;
+    visibility hidden
+  .under-products
+    display flex
+    margin-top 10px
+    position relative
+  .controls
+    flex-basis 75%
+    display: flex;
+    left: 10%;
+    position: relative;
+    justify-content: space-evenly;
+  .cont-call-proceso
+    width 80%
+  .justify-sm-evenly
+    justify-content space-evenly!important
+  .proceso-sm
+    left 5%
+    width 35%
+    top 47%
+  .landing_nav
+    nav
+      position relative
+      .logo
+        width 50px
+        margin-top 2%
+    .contactar-landing
+      top: 80%;
+      right: -8%;
+
+  .titulo-r2
+    &:before
+      width 45%
+      top -10%
+  .slider-pagination-bullets
+    top 40px
+    left 0
+    width 100%
+
+  // pagina de sobre nosostros
+  .historia-r1
+    flex-direction column
+    .bg-hoja
+      &:before
+        width 200px
+        top -35%
+        left 30%
+    div
+      margin-bottom 1em
+      padding 20px 25px
+    .history-img
+      height 70vh
+      background-position center
+      background-size contain
+    .valores
+      height 75vh
+      background-size 210px
+      background-position center
+  .column-sm-inverse
+    flex-direction column-reverse!important
+  .historia-r2
+    .cont-bordered
+      flex-direction column
+  .titulo-r2
+    &:before
+      width 50%
+      top -100%
+      opacity 0.7
+  .titulo-producto
+    &:before
+      width 50%
+      top -10%
+      left 0
+      opacity 0.7
+  .desc-nosotros
+    position relative
+    width 70%
+  .contacto-nosotros
+    position relative
+    left 0
+    width 70%
+  .nosotrosbg
+    &::before
+      //height @width
+      height 140vh
+  .nosotros-header
+    left 20%
+  .title-contact
+    position absolute
+    top: -13%
+    left: 38%
+  .flex-contact
+    flex-direction column
+    .contact-contact
+      flex-basis 100%
+    .contact-map
+      height 80vh
+  .conocenos-desc
+    left 18%
+  .contact-form-container
+    position relative
+    left 0
+    width 70%
+  .desc-contact-contact
+    position relative
+    left 0
+    width 70%
+  .split_panel
+    div
+      width 50%
+
+  .comparative
+    .types_fats
+      .split_panel > div
+        .wrapper
+          width 100%
+          padding-top 0
+          margin-left 0!important
+      .comparison_oils
+        width 70%
+        height 150px
+        top 30%
+  .cont-bot-comp
+    display flex
+    align-items center
+    .bot-comp
+      width 70%
+      height 50%
+  .pb-sm-0
+    padding-bottom 0
+
+  .saturated_fats
+    padding-top 0px
+  .comparative
+    .oil_comparison
+      .bar_graph_content
+        .bar_graph
+          flex-direction column
+          .bar
+            &:after
+              position absolute
+              right -25px
+  .txt-fats
+    padding 0 20px
+    text-align justify
+  .saturated-bar
+    padding-top 0!important
+  .comparative-graph
+    &:before
+      content none
+  .txt-fats
+    padding 0 80px
+    text-align justify
+  .cabecera-comp
+    width 100%!important
+  .fix-home
+    display none
+
+  .menuf-hide-sm
+    display none
+  footer
+    .input-lyonn
+      background: #fff;
+      width: 100%;
+      opacity: 0.5;
+      padding-top: 15px;
+      padding-bottom: 15px;
+  .fs-16
+    font-size 10px
+  .fs-30
+    font-size 17px
+  .fs-45
+    font-size 28px
+  .fs-24
+    font-size 16px
+  .fs-14
+    font-size 12px
+  .fs-15
+    font-size 13px
+  .fs-13
+    font-size 11px
+  .fs-13-contact-f
+    font-size 13px
+  .fs-11
+    font-size 9px
+  .fs-12
+    font-size 8.5px
+  .fs-100
+    font-size 60px
+  .fs-28
+    font-size 18px
+  .fs-18
+    font-size 12px
+  .fs-74
+    font-size 40px
+  .fs-20
+    font-size 15px
+  .title-process-med
+    margin-top 20%!important
+  .flex-sm-nowrap
+    flex-wrap nowrap!important
+  .pt-sm-0
+    padding-top 0!important
+
+//Spamrt phones vertical
+@media all and (max-width: 575px)
+  .pt-sm-2
+    padding-top 2em!important
+  .icon-home
+    display none!important
+  .slider-benefits
+    display flex
+    height 40%
+    .container-benefits
+      margin-top 0!important
+      .contenedor-bene
+        width 101%
+        display inline-grid
+        p
+          padding 0 15%
+          margin-top 1%
+  .main_nav
+    .logo-min
+      margin-left auto
+      background-image url("../assets/img/icons/logo_tanoili.svg")
+      background-size contain
+      position absolute
+      background-repeat no-repeat
+      width: 25%;
+      height: 23%;
+      left: 40%;
+      bottom: 59%;
+    nav
+      position relative
+      padding-top 0
+      //display none
+      background-color #a8aa19
+      .link
+        height 50px
+        font-size 11px
+      ul
+        background-color #a8aa19
+        text-align center
+        height 100vh
+        .logo
+          display none
+        .logo-responsive
+          padding-top 20px
+          display inline-block
+          position: relative
+          width: 70px
+    .logo-responsive-main
+      display block
+      width 60px
+      top 15%
+      right 0
+      left 43%
+      z-index 10
+  section.header-n
+    .avocado-benefits
+      height: 80%!important
+      &:before
+        top: 5vh
+        height 100%
+    .col-right
+      width 45%
+      right 0%
+      top 16%
+      .col-container-r
+        &:before
+          width: 30%
+          height: 160%
+          top: -30%
+          left: 35%
+    .col-left
+      width 45%
+      left 0%
+      top 16%
+      .col-container
+        &:after
+          width: 44%
+          height: 110%
+          top -25%
+          left 25%
+    .avocado
+      width 67%
+      top 15%
+
+    .descubrir
+      top calc(99vh - 80px)
+      .down-ico
+        height 20px
+    .col-left-aceite
+      left 34%
+      z-index 1
+      top 15%
+    .col-left-text
+      top 72%
+      left: -2%;
+      width 80%
+    .descubrir-avo
+      top calc(99vh - 4%)!important
+    .col-right-aceite
+      left 6%
+      z-index 1
+      top 17%
+      div
+        &:before
+          width 52%
+          left 22%
+    .col-right-text
+      top 72%
+      left: -7%;
+      width 90%
+    .col-right-benefits
+      width 40%
+      right -2%
+      //position relative
+    .col-left-benefits
+      width 40%
+      left -2%
+    .avocado-benefits
+      opacity 0.9
+      width 50%
+  .t-40
+    top 42%
+  .t-65
+    top 69%
+  .hide-text
+    display none
+  .txt-sm-center
+    text-align center!important
+  .modal
+    article
+      .container-modal
+        width 95%
+      .img-hoja
+        width 180px
+        height 70px
+    &.comparative
+      &:before
+        height 100vh
+  .mt-sm-0
+    margin-top 0!important
+
+  .galeria-recetas
+    width 87%
+    top 45%
+    right 8%
+    .cont-img-gal
+      flex-basis 31%
+  .title-section
+    margin-top 16%
+  .title-home-contact
+    margin-top 28%
+  .title-section-land
+    margin-top 0%
+  .f-contact
+    flex-basis 100%!important
+  .subt-contact-home
+    top 21%!important
+  .contact-home
+    top 50%!important
+  .cocina-desc
+    width 80%
+    top 15%
+    left 10%
+    &:after
+      width 80%
+      left 15%
+      top -15%
+  .top-10
+    top 10%
+  .contacto
+    width 90%
+    position absolute
+    left 4%
+    top 40%
+  .button
+    margin-top 2em!important
+  .subt-desc
+    width 90%
+    position absolute
+    left 5%
+    top 15%
+  .list-footer
+    margin-top 1em
+  .amazon
+    margin-top -60%
+    margin-left 41%
+  .amazon-footer
+    margin-top 75%
+    margin-left 30%
+    flex-basis 30%
+    position relative
+    display -webkit-box
+    img
+      margin-top 15px
+      margin-left: 7px;
+      width: 60px;
+  .logos-smm
+    flex-basis 20%
+  .f-logos
+    flex-basis 100%
+    flex-wrap nowrap
+    margin-top 0!important
+    height 55px
+    .social-cont
+      justify-content center
+      flex-wrap wrap
+      width 98%
+      flex-direction column-reverse
+      margin-top 5%
+      div
+        width 60%
+        margin-left 18%
+      .info-contacto
+        display flex
+        flex-wrap wrap
+        justify-content center
+        margin-right 10px
+        margin-top 10px!important
+        p
+          padding-top: .5em;
+
+    .logos-footer
+      width 12%
+      height 100%
+  .col-menu-f
+    flex-basis 33%
+  .full-heigh-sm
+    height 100vh!important
+  .column-footer
+    height 74vh
+  .fp-auto-height
+
+  .amazon
+    img
+      width 55px
+  .column-reverse-sm
+    flex-direction column-reverse
+    padding 0 10px
+  .img-social-fsm
+    margin-left 20%!important
+    position inherit
+  .slider-fran
+    .controls
+      bottom 6%
+      li
+        font-size 13px
+        &.active-slider
+          font-size 15px
+          height 13px
+          width 13px
+          line-height 13px
+    .container-fran
+      margin-top 14vh
+    .contenedor-products
+      width 95%
+      margin-right 19px
+
+  .cont-titulo
+    position: absolute;
+    left: 12%;
+    bottom: 65%;
+  .back-circle
+    &:before
+      background-size 33%
+      right 0%
+  .back-circle-bigger
+    &:before
+      background-size 50%
+  .button-conocer
+    position absolute
+    bottom 3%
+  .amazon-products
+    visibility: visible;
+    left: 20% !important;
+    bottom: -20%!important;
+    width: 20%;
+    margin-top: 0;
+    padding-top: 10px;
+    top: 35px !important;
+  .under-products
+    display flex
+    margin-top 10px
+    position relative
+  .controls
+    flex-basis 75%
+    display: flex;
+    left: 10%;
+    position: relative;
+    justify-content: space-evenly;
+    min-width 85%
+  .img-product
+    margin-left 0%
+    text-align center
+    margin-top 0
+    .imagen-prod
+      width 190px
+
+  .nowrap-slid-prod
+    flex-wrap wrap
+    width 100%
+    margin 0
+  .table-product
+    width 200%
+    margin-left 2%
+  .menu-footer
+    flex-basis 100%
+    margin-top 1em!important
+    flex-wrap wrap
+  .historia-r1
+    .bg-hoja
+      &:before
+        width 200px
+        top -20%
+        left 15%
+  .valores
+    height 40vh
+    background-size 200px
+  .desc-nosotros
+    position relative
+    left 0
+  .contacto-nosotros
+    position relative
+    left 0
+  .div-tanoili
+    position absolute
+    top -60px
+    left 10%
+    span
+      font-weight 700
+  footer
+    height 85vh!important
+  .input-lyonn
+    padding-left 10px
+    padding-top 20px
+    bottom 0
+    position absolute
+    .column
+      span
+      .ico-container
+        .lyon-ico
+          width 25px!important
+          left -40%!important
+      div
+        flex-basis 63%
+      .love-lyonn
+        justify-content flex-end
+        position relative
+        &::before
+          content ''
+          left -32%!important
+  .f-social-cont-sm
+    position absolute
+    top 10%
+  .img-footer
+    display flex
+    justify-content space-around
+    margin-top 3em
+  .contactar
+    transform translateX(-127%) translateY(1400%) !important
+    p
+      font-size 10px
+
+  .btn-desplegable
+    display block
+    position absolute
+    width 8%
+    z-index 1
+    right 20px
+
+  .landing_nav
+    nav
+      position relative
+      .logo
+        width 40px
+    .contactar-landing
+      top: -685%;
+      right: -27%;
+    .contactar-landing
+      top: -685%;
+      right: -26%;
+    .dropdown_language
+      .dropdown_define > i
+        right 8px
+  .offset-10
+    flex-basis 0
+  .container-slide
+    justify-content center
+    transform: translateY(2%)
+    .img-slider
+      justify-content center
+      display flex
+      align-items center
+      flex-basis 25%
+      img
+        width 80px
+        height 80px
+        margin-left 5%
+        margin-top -5%
+        position inherit
+    .text-slider
+      flex-basis 70%
+
+  .slider
+    width:100%;
+    margin:0;
+    height:50%
+    margin-top 35%
+  .cont-call-proceso
+    width 80%
+    max-width 65%
+  .justify-sm-evenly
+    justify-content space-evenly!important
+
+  .table-responsive
+    width 90%
+    margin-left 4%
+    margin-top 20%
+  .back-ico
+    &:before
+      content ''
+      background-image url("../assets/img/icons/back-ico.svg")
+      background-size 36%
+      background-position center
+      background-repeat no-repeat
+      padding 0 20px
+      cursor pointer
+
+  .title-contact
+       position absolute
+       top: -10%
+       left: 31%
+  .contact-form-container
+    position relative
+    left 0
+  .desc-contact-contact
+    position relative
+    left 0
+  .split_panel
+    div
+      width 100%
+
+  .comparative
+    .types_fats
+      .split_panel > div
+        .wrapper
+          width 100%
+          padding-top 10px
+          margin-left 0!important
+      .comparison_oils
+        width 70%
+        height 150px
+        top 50%
+  .mx-sm-2
+    margin-left 4em!important
+    margin-right 4em!important
+  .ml-sm-0
+    margin-left 0!important
+  .cont-bot-comp
+    display flex
+    align-items center
+    .bot-comp
+      width 100%
+      height 40%
+  .saturated_fats
+    padding-top 100px!important
+  .comparative
+    .types_fats
+    .oil_comparison
+      .bar_graph_content
+        .bar_graph
+          flex-direction column
+  .saturated-bar
+    padding-top 0!important
+  .comparative-graph
+    &:before
+      content none
+
+  section
+    &.bg-comparative
+      &:before
+        height 100vh
+  .txt-fats
+    padding 0 20px
+    text-align justify
+  .cabecera-comp
+    width unset !important
+  .height-full-125
+    height 100vh
+  .slider-pagination-bullets
+    top 10px
+    left 0
+    width 100%
+
+  .historia-r1
+    flex-direction column
+    .bg-hoja
+      &:before
+        width 200px
+        top -35%
+        left 30%
+    div
+      margin-bottom 1em
+      padding 20px 25px
+    .history-img
+      height 70vh
+      background-position center
+      background-size cover
+    .valores
+      height 45vh
+      background-size 210px
+  .p-hide-sm
+    display none
+  .p-show-sm
+    display block
+  .contactar-nxt
+    &:after
+      right: -25px
+  .mas-small
+    &:after
+      top -2px
+@media all and (max-height: 700px)
+  .column
+    max-width 1250px
