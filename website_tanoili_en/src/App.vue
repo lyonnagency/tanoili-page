@@ -1,6 +1,8 @@
 <template lang="pug">
   #app
     .pattern
+    a.floating-button(href="https://tanoilishop.com/" target="_blank")
+      img(src="../src/assets/img/icons/cart.svg")
     transition(:name="transitionName")
       router-view
 </template>

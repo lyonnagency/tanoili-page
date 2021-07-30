@@ -12,7 +12,8 @@
         .cont-call-proceso.txt-center(data-aos="just-fade" data-aos-duration="2000" )
           h2.ff-georgia.fs-31.tit-call.fs-24 Aceite de #[span Aguacate Tanoili]. Cocina gourmet, cocina sano, cocina delicioso
           .cont-flex.mt-4.justify-center(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="500")
-            span.fs-12.saber-mas.mx-call-1.mx-sm-2 VER PRODUCTOS
+            router-link(to="/products" alt="Ver productos").fs-11.fw-500.pt-sm-2.mx-sm-2
+              span.fs-12.saber-mas.color-proceso.mx-call-1.mx-sm-2 VER PRODUCTOS
             router-link(to="/contact" alt="Go to Contact").fs-11.fw-500.mx-call-1.pt-sm-2.mx-sm-2
               span.fs-12.ml-2.saber-mas.color-proceso.ml-sm-0 CONTACTAR
 

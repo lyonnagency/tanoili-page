@@ -72,7 +72,7 @@
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Vida útil: 3 meses después de abierto
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Producto hecho en México
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Origen: Tancítaro, Michoacán
-              li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Distribuido por: Tanoili Foods S.A.P.I DE C.V. Lomas del Parque 153 Col. Lomas del Valle Morelia, c.p. 58170 , Michoacán
+              li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Distribuido por: Tanoili. Blvd García de León 1685 int 301 Col. Chapultepec oriente c.p. 58260 Morelia, Michoacán. México
           .f-basis-40.txt-center.cont-bot-comp
             img.bot-comp(width=400 src="../../assets/img/botella-08.png" alt="Avocado")
     section.section.call-proceso.py-5.headline
@@ -80,8 +80,9 @@
         .cont-call-proceso.txt-center(data-aos="just-fade" data-aos-duration="2000")
           h2.ff-georgia.fs-31.tit-call.fs-24 Aceite de #[span Aguacate Tanoili]. Cocina gourmet, cocina sano, cocina delicioso
           .cont-flex.mt-4.justify-center(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="500")
-            span.fs-12.saber-mas.mx-call-1.mx-sm-2 VER PRODUCTOS
-            router-link(to="/contact" alt="Go to Contact").fs-11.fw-500.mx-call-1.pt-sm-2.mx-sm-2
+            router-link(to="/products" alt="Ver productos").fs-11.fw-500.pt-sm-2.mx-sm-2
+              span.fs-12.saber-mas.color-proceso.mx-call-1.mx-sm-2 VER PRODUCTOS
+            router-link(to="/contact" alt="Contacto").fs-11.fw-500.mx-call-1.pt-sm-2.mx-sm-2
               span.fs-12.ml-2.saber-mas.color-proceso.ml-sm-0 CONTACTAR
 </template>
 

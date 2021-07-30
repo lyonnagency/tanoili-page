@@ -35,8 +35,8 @@
           li.dropdown_menu-item: a(href="https://en.tanoili.com" alt="English").fs-11.ct-light ENG
       a(href="#home" alt="Contacta a Tanoili en Whatsapp").logo-min
       .contactar.hide#contactar
-        a(href="https://wa.me/524435372225" alt="Go to Contact" target="_blank").fs-12.fw-500
-          p.contactar-nxt + 52 (443) 537 2225
+        a(href="https://wa.me/5214432285228" alt="Go to Contact" target="_blank").fs-12.fw-500
+          p.contactar-nxt +52 1 (443) 228 5228
 
 </template>
 

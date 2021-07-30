@@ -15,7 +15,7 @@
             .txt-center.py-5
               img.logo-contact(src="../../assets/img/icons/TanoiliLogo.svg")
               .info-contacto.mt-2.ff-georgia.fs-13
-                p.bordered Office: + 52 (443) 537 2225
+                p.bordered Office: +52 1 (443) 228 5228
                 p.bordered Mail: oil@tanoili.com
                 p Blvd Garcia de Leon 1685 int 301
                 p Col. Chapultepec oriente c.p. 58260

@@ -1,35 +1,94 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>Aceite de Aguacate Mexicano | Tanoili</title>
-    <meta name="language" content="es">
-    <meta name="classification" content="Web">
-    <meta name="description" content="Aceite de aguacate Tanoili, el aceite que buscabas para tu cocina, trayendo todos los beneficios del aceite de aguacate y además el gran sabor del aguacate michoacano">
-    <link type="text/plain" rel="author" href="http://tanoili.com/humans.txt">
-    <link rel="canonical" href="http://tanoili.com/">
-    <!-- Library to send the emails -->
-    <meta name="google" content="notranslate">
-    <!-- Chrome, Firefox OS and Opera -->
-    <meta name="theme-color" content="#787121">
-    <!-- Windows Phone -->
-    <meta name="msapplication-navbutton-color" content="#787121">
-    <!-- iOS Safari -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="#787121">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="194x194" href="/static/img/apple_touch_icon.png" type="image/png">
-    <link rel="icon" sizes="32x32" href="/static/img/favicon.png" type="image/png">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Aceite de Aguacate Mexicano | Tanoili</title>
+  <meta name="language" content="es">
+  <meta name="classification" content="Web">
+  <meta name="description"
+        content="Aceite de aguacate Tanoili, el aceite que buscabas para tu cocina, trayendo todos los beneficios del aceite de aguacate y además el gran sabor del aguacate michoacano">
+  <link type="text/plain" rel="author" href="http://tanoili.com/humans.txt">
+  <link rel="canonical" href="http://tanoili.com/">
+  <!-- Library to send the emails -->
+  <meta name="google" content="notranslate">
+  <!-- Chrome, Firefox OS and Opera -->
+  <meta name="theme-color" content="#787121">
+  <!-- Windows Phone -->
+  <meta name="msapplication-navbutton-color" content="#787121">
+  <!-- iOS Safari -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#787121">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="194x194" href="/static/img/apple_touch_icon.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="/static/img/favicon.png" type="image/png">
 
-    <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="/static/js/jquery.fullPage.js"></script>
-    <script src="/static/js/smtp.js"></script>
-  </body>
+  <link rel="stylesheet" href="/static/css/jquery.fullPage.css">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '3056658254561156');
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=3056658254561156&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+
+<!-- Código de verificación de propiedad de dominio de Facebook -->
+  <meta name="facebook-domain-verification" content="f6sfc245e873f6s4q6gno17hek22pe" />
+<!--  Fin de la etiqueta de verificación de propiedad de dominio-->
+
+</head>
+<body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      xfbml            : true,
+      version          : 'v9.0'
+    });
+  };
+
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat"
+     attribution=install_email
+     page_id="2236623363284601"
+     theme_color="#787121"
+     logged_in_greeting="&#xa1;Hola! &#xbf;C&#xf3;mo te puedo ayudar?"
+     logged_out_greeting="&#xa1;Hola! &#xbf;C&#xf3;mo te puedo ayudar?">
+</div>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="/static/js/jquery.fullPage.js"></script>
+<script src="/static/js/smtp.js"></script>
+</body>
 </html>

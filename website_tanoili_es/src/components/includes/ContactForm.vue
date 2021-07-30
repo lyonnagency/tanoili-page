@@ -90,7 +90,8 @@
         <p>Y se ha escrito el siguiente mensaje:</p>
         <p>${this.mensaje}</p>`
 
-        var token = '1ca007b3-5f4e-4082-9c81-acbf30a4f4df'// ssl, domain, port 465
+        // var token = '1ca007b3-5f4e-4082-9c81-acbf30a4f4df'// ssl, domain, port 465
+        var token = 'aa010334-4397-4851-9394-518b62d78040'// no-ssl, domain, port 587
         // disable button
         var btn = this.submitButton;
         btn.disabled = true

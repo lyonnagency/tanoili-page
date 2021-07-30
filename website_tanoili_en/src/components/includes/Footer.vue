@@ -4,7 +4,7 @@
       .cont-flex
         .col.f-basis-20.f-logos.mt-4.logos-smm
           img.logos-footer(src="../../assets/img/icons/TanoiliLogo.svg" alt="Aguacate tanoili")
-          img.logos-footer(src="../../assets/img/icons/TanoiliFoodsBelong.svg" alt="Aguacate tanoili")
+          //img.logos-footer(src="../../assets/img/icons/TanoiliFoodsBelong.svg" alt="Aguacate tanoili")
           img.logos-footer(src="../../assets/img/icons/jay-kosher-logo.svg" alt="Aguacate tanoili")
         .f-basis-60.menu-footer.mt-3.menuf-hide-sm
           .col-menu-f.txt-center.f-basis-25
@@ -72,7 +72,7 @@
                 img.social-icons(src="../../assets/img/icons/linkedin-ico.svg" alt="Linkedin Tanoili")
             .info-contacto.mt-2.ff-georgia.fsty-italic.fs-13.fs-13-contact-f
               p
-                a(href="tel:524435372225" ).color-desc Office: + 52 (443) 537 2225
+                a(href="tel:524435372225" ).color-desc Office: +52 1 (443) 228 5228
               p
                 a(href="mailto:oil@tanoili.com").color-desc Mail: oil@tanoili.com
               p Blvd Garcia de Leon 1685 int 301
@@ -84,9 +84,10 @@
     .input-lyonn
       .column.column-new
         div.div-tanoili
-          span.ff-gotham.fs-11 Copyright © 2019 Tanoili Foods S.A.P.I. de C.V.
+          span.ff-gotham.fs-11 Copyright © 2020 Tanoili.
         div.ff-gotham.fw-700.fs-11.love-lyonn
           span(v-on:click="redirectToLyonn") From Lyonn Agency with love.
+
 </template>
 
 <script>

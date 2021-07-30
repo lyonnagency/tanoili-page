@@ -18,8 +18,8 @@
         router-link(to="/" alt="Tanoili").logo
           img(src="../../assets/img/icons/TanoiliLogo.svg")
         .contactar.contactar-landing
-          a(href="https://wa.me/524435372225" alt="Go to Contact" target="_blank").fs-11.fw-500
-            p.contactar-nxt.color-base-txt + 52 (443) 537 2225
+          a(href="https://wa.me/5214432285228" alt="Go to Contact" target="_blank").fs-11.fw-500
+            p.contactar-nxt.color-base-txt +52 1 (443) 228 5228
 </template>
 
 <script>

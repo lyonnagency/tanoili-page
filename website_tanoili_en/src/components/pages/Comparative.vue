@@ -71,7 +71,7 @@
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Shelf-life: 3 months after open
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Made in Mexico
               li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Origin: Tancitaro, Michoacan
-              li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Distributed by: Tanoili Foods S.A.P.I DE C.V. Lomas del Parque 153 Col. Lomas del Valle Morelia, c.p. 58170, Michoacan
+              li(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="1000") Distributed by: Tanoili. Blvd García de León 1685 int 301 Col. Chapultepec oriente c.p. 58260 Morelia, Michoacán. México
           .f-basis-40.txt-center.cont-bot-comp
             img.bot-comp(width=400 src="../../assets/img/botella-08.png" alt="Avocado")
     section.section.call-proceso.py-5
@@ -79,7 +79,8 @@
         .cont-call-proceso.txt-center
           h2.ff-georgia.fs-31.tit-call.fs-24(data-aos="just-fade" data-aos-duration="2000") Tanoili #[span Avocado Oil]. Cook gourmet, cook healthy, cook tasty.
           .cont-flex.mt-4.justify-center(data-aos="just-fade" data-aos-duration="2000" data-aos-delay="500")
-            span.fs-12.saber-mas.mx-call-1.mx-sm-2 SEE PRODUCTS
+            router-link(to="/products" alt="Go to Process").fs-11.fw-500.pt-sm-2.mx-sm-2
+              span.fs-12.saber-mas.mx-call-1.mx-sm-2.color-proceso SEE PRODUCTS
             router-link(to="/contact" alt="Go to Contact").fs-11.fw-500.mx-call-1.pt-sm-2.mx-sm-2
               span.fs-12.ml-2.saber-mas.color-proceso.ml-sm-0 CONTACT US
 </template>
